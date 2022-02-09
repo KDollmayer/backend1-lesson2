@@ -1,0 +1,15 @@
+
+ <%- include("partials/header.ejs") %>
+    <h1> <%= title %> </h1>
+    <p>Some text</p>
+    <ul>
+        <% heroes.forEach((hero) => { %>
+            <li>
+                <%= hero.name %> 
+                <% if (hero.origin) { %>
+                   of <%= hero.origin %>
+               <% } %>
+            </li>
+        <% }) %>
+    </ul>
+ <%- include("partials/footer.ejs") %>
