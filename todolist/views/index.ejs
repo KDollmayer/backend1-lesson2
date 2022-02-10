@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1> Todo-list </h1>
+    </div>
+    <div>
+        <ul  >
+            <% todo.forEach(todoItem => { %>
+            <li>
+                <%= todoItem.title %>
+                <%= todoItem.todotext %>
+                <%= todoItem.date %>
+                <button> delete <%= todoItem.title %> </button>
+            </li>
+            <% }) %> 
+
+
+        </ul>
+    </div>
+    <div>
+        <h3>Create Todo-list</h3>
+        <form action="/submit" method="POST">
+            <input type="text" name="title" placeholder="title"> <br>
+
+            <textarea name="todotext" placeholder="Todo-item" ></textarea> <br>
+            <button type="submit"> Save </button>
+
+        </form>
+    </div>
+
+</body>
+</html>
